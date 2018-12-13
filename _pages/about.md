@@ -30,7 +30,8 @@ permalink: /about
     - 화면의 이벤트 상호작용과 컴포넌트 구성
     - 데이터 패치 외의 모든 작업
 
-**일본 기업용 IT 자산관리 시스템 ISM 리팩토링**
+
+**[일본 기업용 IT 자산관리 시스템 ISM 리팩토링](../truslab)**
   - 2017년 12월 – 2018년 10월 · 트러스랩 · desktop
   - Angular, Elastic Search , Go, PostgreSQL
   - IT자산관리 솔루션 일본 퀄리티소프트 ISM 리팩토링
@@ -39,7 +40,7 @@ permalink: /about
     - 간단한 DB 쿼리 작성 및 Elastic Search 쿼리 작성
     - 일본측 프론트앤드 작업 커뮤니케이션
 
-**랜덤채팅 어플리케이션**
+**[랜덤채팅 어플리케이션](../valuegames)**
   - 2016년 12월 - 2017년 4월 · 벨류게임즈(옴니버스) · mobile
   - React Native, Firebase, Nodejs
   - 랜덤채팅 어플리케이션 구현
@@ -49,7 +50,7 @@ permalink: /about
     - Redux 를 사용 전역 State 관리
     - 로컬DBRealm 내부 DB 설계
 
-**코빗 거래소팀**
+**[코빗 거래소팀](../korbit)**
   - 2016년 03월 ~ 2016년 05월 · 코빗 · mobile desktop
   - React, Ruby on Rails
   - 이더리움 가상화폐를 거래할 수 있는 거래소 페이지 런칭
@@ -59,7 +60,7 @@ permalink: /about
     - 모바일 네비게이션바 개선
     - 뉴 월렛 출금 페이지
 
-**코빗 거래소 인턴 프로젝트**
+**[코빗 거래소 인턴 프로젝트](../korbit)**
   - 2016년 04월 ~ 2016년 05월 · 코빗 · desktop
     - Solidity, React, Python
     - 매주 하는 발표 주제 Web crawling하여 투표하여 이더리움 토큰을 Vote하는 인턴 프로젝트
