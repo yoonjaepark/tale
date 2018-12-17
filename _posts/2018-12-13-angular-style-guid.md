@@ -3,7 +3,7 @@ layout: post
 title: "앵귤러 스타일 가이드"
 author: "YoonJae"
 image: "https://angular.io/assets/images/logos/angular/angular.svg"
-description: "앵귤러 스타일 가이드 정의"
+description: "앵귤러 스타일 가이드 | 초보개발자 기술 블로그"
 ---
 
 ## 목차
@@ -62,7 +62,7 @@ description: "앵귤러 스타일 가이드 정의"
 
 * 배열 리스트가 변경될 때 DOM 트리를 다시 랜더링 하지만 trackBy하면 Angular는 어떤 요소가 변경되었는지 알게되고 특정 요소에 대해서만 DOM을 변경합니다.
 
-```hack
+```typescript
 // bad
 <li *ngFor="let item of items;">{{ item }}</li>
 
@@ -75,6 +75,7 @@ trackByFn(index, item) {
    return item.id; // unique id corresponding to the item
 }
 ```
+
 [top](#목차)
 
 ## const vs let
