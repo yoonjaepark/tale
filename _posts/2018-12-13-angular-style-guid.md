@@ -2,7 +2,8 @@
 layout: post
 title: "앵귤러 스타일 가이드"
 author: "YoonJae"
-description: "사이트의 가장 중요한건 바로 SEO다"
+image: "https://angular.io/assets/images/logos/angular/angular.svg"
+description: "앵귤러 스타일 가이드 정의"
 ---
 
 ## 목차
