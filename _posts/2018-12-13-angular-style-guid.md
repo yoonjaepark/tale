@@ -2,14 +2,10 @@
 layout: post
 title: "앵귤러 스타일 가이드"
 author: "YoonJae"
+description: "사이트의 가장 중요한건 바로 SEO다"
 ---
 
-## 참고
----
-- [https://angular.io/guide/styleguide](https://angular.io/guide/styleguide)
-- [https://medium.freecodecamp.org/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f](https://medium.freecodecamp.org/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f)
-
-## 순서
+## 목차
 ---
 1. [파일을 400 줄로 제한하는 것을 고려하십시오.](#파일을-400-줄로-제한하는-것을-고려하십시오)
 1. [함수를 짧게 작성하세요.](#함수를-짧게-작성하세요)
@@ -37,27 +33,39 @@ author: "YoonJae"
 1. [Karma](#karma) 
 1. [Universal](#universal)
 
+---
+
+## [참조 URL](#참조)
+
+---
+
 ## 파일을 400 줄로 제한하는 것을 고려하십시오.
 
 ---
 
-같은 파일 당 서비스 또는 컴포넌트 요소로, 한 가지를 정의합니다. 파일 당 하나의 컴포넌트 를 사용하면 소스 제어에서 팀과의 충돌을 읽고, 유지하고, 충돌을 피할 수 있습니다. 파일 당 하나의 구성 요소는 변수를 공유하거나 불필요한 종결을 만들거나 종속성과 원하지 않는 결합을 일으키는 파일에서 구성 요소를 결합 할 때 종종 발생하는 숨겨진 버그를 방지합니다. 하나의 구성 요소가 파일의 기본 내보내기가 될 수 있으므로 라우터를 통한 지연로드가 용이합니다. 핵심은 코드를 재사용 가능하고 읽기 쉬우며 실수가 적은 코드로 만드는 것입니다.
+* 같은 파일 당 서비스 또는 컴포넌트 요소로, 한 가지를 정의합니다. 
+* 파일 당 하나의 컴포넌트 를 사용하면 소스 제어에서 팀과의 충돌을 읽고, 유지하고, 충돌을 피할 수 있습니다. 
+* 파일 당 하나의 구성 요소는 변수를 공유하거나 불필요한 종결을 만들거나 종속성과 원하지 않는 결합을 일으키는 파일에서 구성 요소를 결합 할 때 종종 발생하는 숨겨진 버그를 방지합니다. 
+* 하나의 구성 요소가 파일의 기본 내보내기가 될 수 있으므로 라우터를 통한 지연로드가 용이합니다. 
+* **핵심은 코드를 재사용 가능하고 읽기 쉬우며 실수가 적은 코드로 만드는 것입니다.**
 
-[top](#순서)
+[top](#목차)
 
 ## 함수를 짧게 작성하세요.
 
 ---
 
-75 줄 이하로 제한하는 것을 고려하십시오 . 작은 기능은 특히 한 가지 일을하고 한 가지 목적을 수행 할 때 테스트하기 쉽습니다. 작은 함수는 재사용을 용이하고 유지 보수가 쉽습니다.
+* 75 줄 이하로 제한하는 것을 고려하십시오. 
+* 함수는 한 가지 일을 하고 한 가지 목적을 수행 할 때 테스트하기 쉽습니다. 
+* 작은 함수는 재사용을 용이하고 유지 보수가 쉽습니다.
 
-[top](#순서)
+[top](#목차)
 
 ## trackBy
 
 ---
 
-배열 리스트가 변경될 때 DOM 트리를 다시 랜더링 하지만 trackBy하면 Angular는 어떤 요소가 변경되었는지 알게되고 특정 요소에 대해서만 DOM을 변경합니다.
+* 배열 리스트가 변경될 때 DOM 트리를 다시 랜더링 하지만 trackBy하면 Angular는 어떤 요소가 변경되었는지 알게되고 특정 요소에 대해서만 DOM을 변경합니다.
 
 ```hack
 // bad
@@ -72,12 +80,16 @@ trackByFn(index, item) {
    return item.id; // unique id corresponding to the item
 }
 ```
-[top](#순서)
+[top](#목차)
+
 ## const vs let
 
 ---
 
-변수를 선언 할 때 값이 재 할당되지 않을 때 const를 사용하세요. 사용 let및 const적절한는 선언 명확의 의도를 만드는 곳. 또한 실수로 컴파일 타임 오류가 발생하여 값을 상수에 다시 할당 할 때 문제를 식별하는 데 도움이됩니다. 또한 코드의 가독성을 향상시키는데도 도움이됩니다.
+* const 변경되지 않는 값에 사용하십시오.
+* let 다른 곳에서 사용할 경우.
+* 실수로 컴파일 타임 오류가 발생하여 값을 상수에 다시 할당 할 때 문제를 식별하는 데 도움이됩니다. 
+* 코드의 가독성을 향상시키는데도 도움이됩니다.
 
 ```typescript
 // bad
@@ -89,16 +101,17 @@ const car = 'ludicrous car';
 let myCar =`My $ {car}`;
 yourCar =`Your $ {car};
 ```
-[top](#순서)
+[top](#목차)
+
 ## Pipeable operators
 
 ---
 
-RxJs 연산자를 사용할 때는 pipe를 사용하세요.
-파이프 가능한 연산자는 트리 셰이크가 가능하므로 우리가 실행해야하는 코드 만 가져올 때 포함됩니다.
+* RxJs 연산자를 사용할 때는 pipe를 사용하세요.
+* 파이프 가능한 연산자는 트리 셰이크가 가능하므로 우리가 실행해야하는 코드 만 가져올 때 포함됩니다.
 또한 파일에서 사용되지 않는 연산자를 쉽게 식별 할 수 있습니다.
 
-- "pipable"(이전 "lettable") 연산자는 RxJS 5.5부터 연산자를 사용 하는 현재의 권장 방법 입니다.
+- **"pipable"(이전 "lettable") 연산자는 RxJS 5.5부터 연산자를 사용 하는 현재의 권장 방법 입니다.**
 
 ```typescript
 // bad
@@ -115,13 +128,19 @@ iAmAnObservable.pipe(
   take(1)
 );
 ```
-[top](#순서)
+
+[top](#목차)
+
 ## Isolate API hacks
 
 ---
 
-모든 API가 확실한 것은 아니며, 때때로 API의 버그를 보완하기 위해 코드에 로직을 추가해야 할 때도 있다. 서비스처럼 한 곳에 격리하고 컴포넌트에서 서비스를 사용하는 것이 좋다. API에서 버그를 수정할 때 코드베이스에 분산될 수 있는 버그를 찾는 것보다 한 파일에서 버그를 찾는 것이 더 쉽다.
-[top](#순서)
+* 모든 API가 확실한 것은 아니며, 때때로 API의 버그를 보완하기 위해 코드에 로직을 추가해야 할 때도 있다. 
+* 서비스처럼 한 곳에 격리하고 컴포넌트에서 서비스를 사용하는 것이 좋다. 
+* API에서 버그를 수정할 때 코드베이스에 분산될 수 있는 버그를 찾는 것보다 한 파일에서 버그를 찾는 것이 더 쉽다.
+
+[top](#목차)
+
 ## Subscribe in template
 
 ---
@@ -131,7 +150,7 @@ iAmAnObservable.pipe(
 ```typescript
 // bad
 // template
-<p>{{ textToDisplay }}</p>
+<p>{{"{{ textToDisplay "}}}}</p>
 // component
 iAmAnObservable
 .pipe(
@@ -142,14 +161,16 @@ iAmAnObservable
 
 // good
 // template
-<p>{{ textToDisplay$ | async }}</p>
+<p>{{"{{ textToDisplay$ | async "}}}}</p>
 // component
 this.textToDisplay$ = iAmAnObservable
 .pipe(
   map(value => value.item)
 );
 ```
-[top](#순서)
+
+[top](#목차)
+
 ## Clean up subscriptions
 
 ---
@@ -198,7 +219,8 @@ takeUntil다른 관측 값이 값을 방출 할 때까지 변경 사항을 듣�
 `take`observable에 의해 생성 된 첫 번째 값만 원할 때 사용
 여기 에 takeUntilwith 의 사용법에 유의 take하십시오. 이는 구성 요소가 손상되기 전에 구독이 값을받지 못했을 때 발생하는 메모리 누수를 방지하기위한 것입니다. takeUntil여기가 없으면 구독은 첫 번째 값을 얻을 때까지 계속 돌아가지만 구성 요소가 이미 파괴 되었기 때문에 절대로 값을 얻지 못하여 메모리 누수가 발생합니다.
 
-[top](#순서)
+[top](#목차)
+
 ## Use appropriate operators
 
 ---
@@ -215,7 +237,8 @@ takeUntil다른 관측 값이 값을 방출 할 때까지 변경 사항을 듣�
 
 가능하면 단일 연산자를 사용하여 여러 다른 연산자를 결합하여 동일한 효과를 얻으려는 경우 코드가 사용자에게 더 효과적 일 수 있습니다. 잘못된 연산자를 사용하면 다른 연산자가 다른 방식으로 구독 가능 항목을 처리하므로 원치 않는 동작이 발생할 수 있습니다.
 
-[top](#순서)
+[top](#목차)
+
 ## Lazy load
 
 ---
@@ -255,7 +278,9 @@ import { LazyLoadComponent }   from './lazy-load.component';
 
 export class LazyModule {}
 ```
-[top](#순서)
+
+[top](#목차)
+
 ## Avoid having subscriptions inside subscriptions
 
 ---
@@ -286,7 +311,9 @@ firstObservable$.pipe (
 });
 
 ```
-[top](#순서)
+
+[top](#목차)
+
 ## Avoid any; type everything;
 
 ---
@@ -315,7 +342,7 @@ Type '"a"' is not assignable to type 'number'.
 const y:number
 ```
 
-[top](#순서)
+[top](#목차)
 
 ## Make use of lint rules
 
@@ -364,7 +391,7 @@ Calls to 'console.log' are not allowed.
 Calls to 'console.warn' are not allowed.
 ```
 
-[top](#순서)
+[top](#목차)
 
 ## Small reusable components
 
@@ -372,7 +399,7 @@ Calls to 'console.warn' are not allowed.
 
 구성 요소에서 재사용 할 수있는 컴포넌트를 추출하여 새 구성 요소로 만듭니다. 구성 요소를 가능한 한 단순하게 만들면 더 많은 시나리오에서 작동합니다. 구성 요소를 단순하게 만드는 것은 구성 요소에 특별한 논리가 없고 해당 구성 요소에 제공된 입력과 출력을 기반으로 순전히 작동한다는 것을 의미합니다. 일반적으로 구성 요소 트리의 마지막 자식은 모두 단순할 것입니다. 재사용 가능한 구성 요소는 코드 중복을 줄이므로 유지 관리와 변경 작업을보다 쉽게 ​​수행 할 수 있습니다. 단순한 구성 요소는 더 간단하므로 버그가 발생할 가능성이 적습니다. 단순한 구성 요소를 사용하면 공용 구성 요소 API에 대해 더 많은 것을 생각하게되며 된 우려 사항을 파악하는 데 도움이됩니다.
 
-[top](#순서)
+[top](#목차)
 
 ## Components should only deal with display logic
 
@@ -380,7 +407,7 @@ Calls to 'console.warn' are not allowed.
 
 구성 요소에서 로직을 제외 하세요. 구성 요소는 표시를 위해 설계되었으며 뷰에서 수행해야 할 작업을 제어합니다. 모든 비즈니스 로직은 비즈니스 로직을 뷰 로직과 분리하여 적절한 경우 자체 메소드나 서비스로 추출해야합니다. 비즈니스 논리는 일반적으로 서비스에 추출 할 때 단위 테스트가 더 쉽고 같은 비즈니스 로직을 적용해야하는 다른 구성 요소에서 재사용 할 수 있습니다.
 
-[top](#순서)
+[top](#목차)
 
 ## Avoid long methods
 
@@ -388,7 +415,7 @@ Calls to 'console.warn' are not allowed.
 
 긴 메소드는 일반적으로 너무 많은 일을하고 있음을 나타냅니다. Single Responsibility 지향하세요. 단일책임원칙 이란 모든 클래스는 하나의 책임만 가지며, 클래스는 그 책임을 완전히 캡슐화해야 함을 일컫는다. 클래스가 제공하는 모든 기능은 이 책임과 주의 깊게 부합해야 한다. 긴 메소드는 이해 및 유지하기가 어렵습니다. 한 가지를 변경하면 그 방법의 많은 다른 것들에 영향을 미칠 수 있으므로 버그가 발생하기 쉽습니다. 또한 리팩토링 을 어렵게 만듭니다. 이것은 때때로 "[순환 적 복잡성](<[https://en.wikipedia.org/wiki/Cyclomatic_complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity)>)"으로 측정됩니다. 또한 순환 적 복잡성을 감지하기 위한 몇 가지 "[TSLint 규칙](<[https://www.npmjs.com/package/tslint-sonarts](https://www.npmjs.com/package/tslint-sonarts)>)"이 있습니다. 이를 사용해 프로젝트에서 버그를 피하고 코드 냄새 및 유지 관리 문제를 감지하는 데 사용할 수 있습니다.
 
-[top](#순서)
+[top](#목차)
 
 ## DRY
 
@@ -396,7 +423,7 @@ Calls to 'console.warn' are not allowed.
 
 코드를 반복하지 마십시오. 동일한 코드가 다른 위치에 복사되지 않도록 하십시오. 동일한 코드를 여러 위치에 두는 것은 해당 코드의 논리를 변경 하려는 경우 여러 위치에서 수행 해야 한다는 것을 의미합니다. 이로 인해 유지 관리가 어려워지고 모든 코드를 변경하지 못하여 버그가 발생하기 쉽습니다. 중복되는 로직을 변경하는 데 시간이 오래 걸리며 테스트도 더 오래 걸리게 됩니다. 이러한 경우 반복 코드를 추출해 사용하십시오. 이것은 변경해야 할 한 곳과 테스트 할 한 곳을 의미합니다. 발생되는 중복 코드가 적어지면 응용 프로그램이 더 빨라 질것입니다.
 
-[top](#순서)
+[top](#목차)
 
 ## Add caching mechanisms
 
@@ -408,7 +435,7 @@ API 호출을 할 때 일부 함수은 응답이 자주 변경되지 않습니�
 
 * 참고 [https://blog.thoughtram.io/angular/2018/03/05/advanced-caching-with-rxjs.html#fetching-new-data-on-demand](https://blog.thoughtram.io/angular/2018/03/05/advanced-caching-with-rxjs.html#fetching-new-data-on-demand)
 
-[top](#순서)
+[top](#목차)
 
 ## Avoid logic in templates
 
@@ -435,7 +462,7 @@ public ngOnInit (): void {
 }
 ```
 
-[top](#순서)
+[top](#목차)
 
 ## Strings should be safe
 
@@ -464,7 +491,7 @@ Type '"Other"' is not assignable to type '"First" | "Second"'
 (property) AppComponent.myValue: "First" | "Second"
 ```
 
-[top](#순서)
+[top](#목차)
 
 ## State Management
 
@@ -476,7 +503,7 @@ Consider using [@ngrx/store](https://github.com/ngrx/platform) for maintaining
 
 *@ngrx/store* isolates all state related logic in one place and makes it consistent across the application. It also has memoization mechanism in place when accessing the information in the store leading to a more performant application. *@ngrx/store* combined with the change detection strategy of Angular leads to a faster application.
 
-[top](#순서)
+[top](#목차)
 
 ## Immutable state
 
@@ -488,7 +515,7 @@ Why?
 
 Mutating state in components leads to the app behaving inconsistently depending on the order components are loaded. It breaks the mental model of the redux pattern. Changes can end up overridden if the store state changes and re-emits. Separation of concerns — components are view layer, they should not know how to change state.
 
-[top](#순서)
+[top](#목차)
 
 ## Jest
 
@@ -497,7 +524,7 @@ Mutating state in components leads to the app behaving inconsistently depending 
 [Jest](https://jestjs.io/)는 Facebook 용 자바 스크립트용 단위 테스트 프레임 워크입니다. 코드 기반에서 테스트 실행을 병렬 처리하여 단위 테스트를 더 빠르게 수행합니다. whatch 모드에서는 변경 사항과 관련된 테스트 만 실행되므로 테스트 응답이 짧씁니다. Jest는 테스트의 코드 범위를 제공하며 VS Code, Webstorm에서 지원됩니다.
 Jest에 [preset](https://github.com/thymikee/jest-preset-angular)을 참고하세요.
 
-[top](#순서)
+[top](#목차)
 
 ## Karma
 
@@ -505,7 +532,7 @@ Jest에 [preset](https://github.com/thymikee/jest-preset-angular)을 참고하�
 
 [Karma](<[https://karma-runner.github.io/2.0/index.html](https://karma-runner.github.io/2.0/index.html)>)는 AngularJS 팀이 개발 한 테스트 러너입니다. 테스트를 실행하려면 실제 브라우저 / DOM이 필요합니다. 그것은 또한 다른 브라우저에서 실행할 수 있습니다. Jest는 테스트를 실행하기 위해 크롬 헤드리스 / 팬텀을 필요로하지 않으며 순수한 노드에서 실행됩니다.
 
-[top](#순서)
+[top](#목차)
 
 ## Universal
 
@@ -513,7 +540,7 @@ Jest에 [preset](https://github.com/thymikee/jest-preset-angular)을 참고하�
 
 앱을 Universal 앱으로 만들지 않았다면 지금 할 수 있습니다. [Angular Universal](<[https://angular.io/guide/universal](https://angular.io/guide/universal)>)을 사용하면 서버에서 Angular 응용 프로그램을 실행하고 정적 사전 렌더링 된 HTML 페이지를 제공하는 서버 사이드 렌더링 (SSR)을 수행 할 수 있습니다. 이렇게 하면 JS 번들로드 및 구문 분석을 기다릴 필요없이 Angular to bootstrap을 사용하지 않고도 화면에 콘텐츠를 거의 즉시 표시 할 수 있으므로 앱이 빠르게 빠르게 처리됩니다. 또한 Angular Universal은 정적 컨텐츠를 생성하고 웹 크롤러가 자바 스크립트를 실행하지 않고도 응용 프로그램의 색인을 생성하고 검색 가능한 상태가되도록하기 때문에 SEO가 편리합니다. Universal은 응용 프로그램의 성능을 대폭 향상시킵니다. 사이트 로딩 시간이 수 초에서 수십 밀리 초로 단축시킬 수 있습니다. 또한 사이트가 소셜 미디어 미리보기 스니펫에 올바르게 표시되도록합니다. 첫 번째로 의미있는 페인트는 정말 빠르며 원치 않는 지연없이 사용자에게 콘텐츠를 보여줍니다.
 
-[top](#순서)
+[top](#목차)
 
 ## Conclusion
 
@@ -525,4 +552,9 @@ Jest에 [preset](https://github.com/thymikee/jest-preset-angular)을 참고하�
 ](https://github.com/yoonjaepark/yoonjaepark.github.io/blob/master/_posts/2018-12-13-angular-style-guid.md
 )
 
+## 참조
+---
+- [https://angular.io/guide/styleguide](https://angular.io/guide/styleguide)
+- [https://medium.freecodecamp.org/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f](https://medium.freecodecamp.org/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f)
 
+[top](#목차)
