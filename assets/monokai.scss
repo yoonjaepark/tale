@@ -2,7 +2,7 @@ $background: #272822;
 
 .highlight {
   background-color: $background;
-  font-size: 0.8rem;
+
   .hll {
     background-color: #49483e;
   }
@@ -129,9 +129,8 @@ $background: #272822;
 
 code{
   background-color: "#282C34";
-//   color: whitesmoke;
-}
+  color: whitesmoke;}
 pre {
   background-color: "#282C34";
-//   color: whitesmoke;
+  color: whitesmoke;
 }
