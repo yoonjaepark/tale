@@ -519,5 +519,10 @@ Jest에 [preset](https://github.com/thymikee/jest-preset-angular)을 참고하�
 
 ---
 
-좋은 가이드라인을 잡아 주실분은 댓글이나 https://github.com/yoonjaepark/yoonjaepark.github.io/blob/master/_posts/2018-12-13-angular-style-guid.md
-에 커밋해주시면 잘 배우겠습니다.
+좋은 가이드라인을 잡아 주실분은 댓글이나 커밋해주시면 잘 배우겠습니다. 
+
+[https://github.com/yoonjaepark/yoonjaepark.github.io/blob/master/_posts/2018-12-13-angular-style-guid.md
+](https://github.com/yoonjaepark/yoonjaepark.github.io/blob/master/_posts/2018-12-13-angular-style-guid.md
+)
+
+
