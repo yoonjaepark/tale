@@ -1,19 +1,29 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@import 'tale';
+
+@import "tale";
 html {
-    font: 400 18px/1.8 "Apple SD Gothic Neo","Nanum Barun Gothic","Nanum Gothic",Verdana,Arial,"Malgun Gothic",Dotum,sans-serif;
-    body, h5 {
-        font-size: 1rem;
+  font: 400 18px/1.8 "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic",
+    Verdana, Arial, "Malgun Gothic", Dotum, sans-serif;
+  body,
+  h5 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  a {
+    word-break: break-all;
+  }
+  .fb_iframe_widget_fluid_desktop,
+  .fb_iframe_widget_fluid_desktop span,
+  .fb_iframe_widget_fluid_desktop iframe {
+    max-width: 100%;
+  }
+  .catalogue-item {
+    p {
+      font-size: 0.8em;
     }
-    h4 {
-        font-size: 1.25rem;
-    }
-    a {
-        word-break: break-all;
-    }
-    .fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span, .fb_iframe_widget_fluid_desktop iframe {
-        max-width: 100%;
-    }
+  }
 }
