@@ -18,7 +18,7 @@ description: "앵귤러 스타일 가이드 | 초보개발자 기술 블로그"
 1. [Use appropriate operators](#use-appropriate-operators)
 1. [Lazy load](#lazy-load)
 1. [Avoid having subscriptions inside subscriptions](#avoid-having-subscriptions-inside-subscriptions)
-1. [Avoid any; type everything;](#avoid-any;-type-everything;)
+1. [Avoid any type everything](#avoid-any-type-everything)
 1. [Make use of lint rules](#make-use-of-lint-rules)
 1. [Small reusable components](#small-reusable-components)
 1. [Components should only deal with display logic](#components-should-only-deal-with-display-logic)
