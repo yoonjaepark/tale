@@ -2,11 +2,13 @@
 layout: post
 title: "어떻게 브라우저는 데이터를 요청할까"
 author: "YoonJae"
-image: "../assets/browser_architecture.png"
+image: "../assets/browser_request.png"
 description: "어떻게 브라우저는 데이터를 요청할까 | 초보개발자 기술 블로그"
 ---
 
 ## 사용자들이 브라우저에 주소를 입력하면 어떻게 화면에 웹사이트가 표시되는 것일까?
+
+![Alt 그림1. browser_request](../assets/browser_request.png)
 
 1. **브라우저에 도메인이 입력**
     - 브라우저는 도메인이 캐시에 들어있는지 확인합니다.
