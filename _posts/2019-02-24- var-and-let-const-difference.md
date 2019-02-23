@@ -8,9 +8,9 @@ description: "Var 와 Let, Const 차이 | 초보개발자 기술 블로그"
 ## Var 와 Let, Const 차이
 
 1. [let과 const는 es6 이후 변수 선언방식](#let과-const는-es6-이후-변수-선언방식)
-1. [let과 const는 한번 선언하면 재선언 불가능하다.](#let과-const는-한번-선언하면-재선언-불가능하다.)
-1. [let은 재할당은 가능하다.](#let은-재할당은-가능하다.)
-1. [var는 Function Scoped이고 let const는 Block Scoped입니다.](#var는-Function-Scoped이고-let-const는-Block-Scoped입니다.)
+1. [let과 const는 한번 선언하면 재선언 불가능하다](#let과-const는-한번-선언하면-재선언-불가능하다)
+1. [let은 재할당은 가능하다.](#let은-재할당은-가능하다)
+1. [var는 Function Scoped이고 let const는 Block Scoped입니다](#var는-Function-Scoped이고-let-const는-Block-Scoped입니다)
 
 ## let과 const는 es6 이후 변수 선언방식
 
