@@ -20,7 +20,7 @@ image: "https://cdn.arstechnica.net/wp-content/uploads/2018/06/7-2-1-800x311.jpg
   flutter create --org com.example --template=plugin hello
 ```
 
-위의 명령어를 입력하면 패키지와 example을 포함한 앱 버전을 가져오는 sample 패키지가 생성하게 된다. android나 ios의 언어를 선택하려면
+위의 명령어를 입력하면 패키지와 example을 포함한 앱 버전을 가져오는 sample 패키지가 생성하게 됩니다. android나 ios의 언어를 선택하려면
 
 ```dart
 flutter create --template=plugin -i swift -a kotlin hello
@@ -30,7 +30,7 @@ flutter create --template=plugin -i swift -a kotlin hello
 
 ## 패키지 구성
 
-```
+``` plain
 --패키지 루트
 ----ios // ios 플랫폼에 필요한 부분을 구현.
 ----android // android 플랫폼에 필요한 부분을 구현.
