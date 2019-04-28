@@ -3,6 +3,7 @@ layout: post
 title: "Flutter 패키지 및 플러그인 개발"
 author: "YoonJae"
 description: "패키지 및 플러그인 개발 | 초보개발자 기술 블로그"
+image: "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjE4fPjqPLhAhXEzLwKHfkODwQQjRx6BAgBEAU&url=https%3A%2F%2Farstechnica.com%2Fgadgets%2F2018%2F06%2Fgoogles-cross-platform-flutter-sdk-hits-release-preview-1%2F&psig=AOvVaw1lN9eOBIWIit5i_Eoz7AX6&ust=1556524772869984"
 ---
 
 ## Flutter
