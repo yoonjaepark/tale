@@ -24,7 +24,7 @@ git clone https://github.com/yoonjaepark/flutter_keep_alive_skeleton/tree/bottom
 
 현재 탭은 3개로 나눠져 있지만 Home 탭을 보면 아시겠지만 페이지별 state값이 저장되지 않아 매번 새로운 값을 노출되게 됩니다. 이는 사용자에게 있어서 앱의 사용 경험에 있어서 안좋은 경험을 하게 해줍니다. 예를 들어 home탭에서 스크롤을 한참 내려서 게시글을 보던중 first탭에 갔다 다시 왔을때 페이지를 다시 처음부터 다시 내려야되는 불하는 편함을 경험시키기게 되기 때문에 페이지별 상태값을 유지시키는 방법을 찾아 보았고 그중 AutomaticKeepAliveClientMixin 를 적용 시켜 보려고 합니다. 
 
-# 2. 페이지별 상태값 유지시키기
+# 3. 페이지별 상태값 유지시키기
 
 페이지별 상태값을 유지시키는것은 여러가지 방법이 있을 수 있습니다. 제가 찾아본 방법보다 더 간단하고 좋을 방법이 있을지 모르겠지만 현재 제가 알아본 방법으로는 몇몇 방법이 있고 그중 제가 제일 간단하다고 느낀 AutomaticKeepAliveClientMixin + PageView 를 적용시켜 보겠습니다. 
 
