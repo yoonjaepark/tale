@@ -284,5 +284,6 @@ lib/main.dart
 # 마무리
 
 이번 글에선 bottomNavigationBar를 이용해 앱을 구성해 봤습니다. 아직 flutter 구조를 잡는거에 정답은 없는거같습니다만 현재 사용하는 대부분의 앱에서 하단에 버튼을 이용해서 화면을 나누기 때문에 먼저 bottomNavigationBar를 이용해 라우터를 구성해봤고 다른 방식을 이용해 라우터를 구성하는 방법들을 살펴볼까합니다.
+### 다음글 - [페이지 상태값 유지하기 AutomaticKeepAliveClientMixin](https://yoonjaepark.github.io/2020-03-09/flutter-keep-alive)
 
 프로젝트에서 사용된 코드는 [Github](https://github.com/yoonjaepark/flutter_keep_alive_skeleton/tree/bottomNavigationBar) 에서 열람 가능합니다.
