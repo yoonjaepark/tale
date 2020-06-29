@@ -6,10 +6,6 @@
 
   <body>
     {% include navigation.html %}
-
-    <main>{{ content }}</main>
-
-    {% include footer.html %}
     <div style="text-align: center;">
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <!-- dispaly -->
@@ -23,6 +19,9 @@
           (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
+    <main>{{ content }}</main>
+
+    {% include footer.html %}
     <div id="fb-root"></div>
     <script>
       (function(d, s, id) {
